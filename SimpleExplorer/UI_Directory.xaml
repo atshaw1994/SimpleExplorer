@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="SimpleExplorer.UI_Directory"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SimpleExplorer"
+             mc:Ignorable="d" 
+             Loaded="UserControl_Loaded"
+             Height="96" Width="96">
+    <Button Style="{DynamicResource BlankButton}" Click="Button_Click"> 
+        <Grid Width="96" Height="96">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="64"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Path Style="{DynamicResource PathMouseOver}"
+              Data="M1,8 h8 v-8 h32 v8 h34 v48 h-74z"
+              x:Name="Glyph"
+              HorizontalAlignment="Center" VerticalAlignment="Center">
+            </Path>
+            <TextBlock x:Name="FolderName_Display" Width="88" Height="28" TextWrapping="Wrap" TextTrimming="WordEllipsis" Text="[DIR]" VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Grid.Row="1" Foreground="{DynamicResource Global.Foreground}" TextAlignment="Center" FontFamily="Arial"/>
+        </Grid>
+        <Button.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Add To Favorites" Click="MenuItem_AddToFavorites_Click"/>
+            </ContextMenu>
+        </Button.ContextMenu>
+    </Button>
+</UserControl>

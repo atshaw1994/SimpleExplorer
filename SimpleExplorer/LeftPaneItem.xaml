@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="SimpleExplorer.LeftPaneItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SimpleExplorer"
+             mc:Ignorable="d" 
+             Loaded="UserControl_Loaded"
+             Height="24" Width="130">
+    <Button Style="{DynamicResource BlankButton}" Click="Button_Click">
+        <Grid Width="130" Height="24" Margin="-1,-1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Path x:Name="ItemType0" Visibility="Visible" Style="{DynamicResource PathMouseOver}">
+            <Path.Data>
+                M2,6 h2 v-2 h8 v2 h8 v12 h-18z
+            </Path.Data>
+        </Path>
+        <Path x:Name="ItemType1" Visibility="Collapsed" Style="{DynamicResource PathMouseOver}">
+            <Path.Data>
+                M2,8 h18 v8 h-18
+                M5,11 h2 v2 h-2
+            </Path.Data>
+        </Path>
+        <TextBlock x:Name="ItemName_Display" Grid.Column="1" Margin="4,0,0,0"
+                   Text="[Favorited Item]" VerticalAlignment="Center" Foreground="{DynamicResource Global.Foreground}"/>
+    </Grid>
+    </Button>
+</UserControl>

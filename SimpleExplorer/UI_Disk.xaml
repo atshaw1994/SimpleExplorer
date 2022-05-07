@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="SimpleExplorer.UI_Disk"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SimpleExplorer"
+             mc:Ignorable="d" 
+             Loaded="UserControl_Loaded"
+             Width="96" Height="96">
+    <Button Style="{DynamicResource BlankButton}" Click="Button_Click">
+        <Grid Width="96" Height="96" Margin="-1,-1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="48"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Path Style="{DynamicResource Disk_PathMouseOver}" Margin="0,8" HorizontalAlignment="Center" VerticalAlignment="Center"
+              Data="M0,12 h48 v16 h-48z M4,17 h4 v4 h-4z M0,12 l8,-12 h32 l8,12 M12,17 h4 v4 h-4z"/>
+            <ProgressBar x:Name="DiskFillProgressBar" Style="{DynamicResource DiskFillProgessBar}" Margin="4" Value="50" Grid.Row="1"/>
+            <TextBlock x:Name="DiskName_Display" VerticalAlignment="Center" Width="88" Text="[Disk]" HorizontalAlignment="Center"
+                   Grid.Row="2" TextAlignment="Center" Foreground="{DynamicResource Global.Foreground}" FontFamily="Arial"/>
+        </Grid>
+    </Button>
+</UserControl>
