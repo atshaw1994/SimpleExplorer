@@ -7,8 +7,8 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Themes\Dark.xaml"/>
-                <ResourceDictionary Source="Controls.xaml"/>
-                <ResourceDictionary Source="CaptionBarStyle.xaml"/>
+                <ResourceDictionary Source="UI_Objs\Controls.xaml"/>
+                <ResourceDictionary Source="UI_Objs\CaptionBarStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
