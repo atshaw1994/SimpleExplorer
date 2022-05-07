@@ -8,6 +8,7 @@
         SourceInitialized="Window_SourceInitialized"
         StateChanged="Window_StateChanged"
         Background="{DynamicResource Global.Background}"
+        Icon="SimpleExplorer.ico"
         WindowStyle="None"
         Title="MainWindow"
         Width="800"
@@ -31,7 +32,7 @@
                     <ColumnDefinition Width="45"/>
                 </Grid.ColumnDefinitions>
                 <Border x:Name="CaptionBar_Border" Background="{DynamicResource CaptionBar.Background.Active}" Grid.ColumnSpan="5"/>
-                <Image/>
+                <Image Width="24" Height="24" Source="SimpleExplorer.ico"/>
                 <TextBlock Text="SimpleExplorer" 
                        Grid.Column="1" VerticalAlignment="Center" Margin="8,0" Foreground="{DynamicResource CaptionBar.Foreground.Active}"/>
                 <Button x:Name="CaptionBar_MinimizeButton" Style="{DynamicResource TitleBarButtonStyle}" Grid.Column="2" Click="CaptionBar_MinimizeButton_Click">
