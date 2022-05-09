@@ -67,7 +67,7 @@
             </Grid>
             <Grid x:Name="ContentArea" Background="{DynamicResource Shade1}" Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="164" />
+                    <ColumnDefinition Width="150" />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <StackPanel x:Name="LeftPane" Margin="8" Background="Transparent">
