@@ -8,9 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="SimpleExplorer.ico">
+    <None Remove="SimpleExplorer.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="SimpleExplorer.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
 
 </Project>

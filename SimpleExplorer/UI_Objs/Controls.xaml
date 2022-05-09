@@ -14,8 +14,7 @@
         <Setter Property="Background" Value="{DynamicResource TextBox.Static.Background}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource TextBox.Static.Border}"/>
         <Setter Property="Foreground" Value="{DynamicResource NavButton.Foreground}"/>
-        <Setter Property="BorderThickness" Value="1,1,0,1"/>
-        <Setter Property="Margin" Value="2,8,0,8"/>
+        <Setter Property="BorderThickness" Value="0,1,0,1"/>
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
         <Setter Property="FontFamily" Value="Arial"/>
         <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
@@ -64,8 +63,7 @@
         <Setter Property="Foreground" Value="{DynamicResource Global.Foreground}"/>
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
         <Setter Property="BorderThickness" Value="1,1,0,1"/>
-        <Setter Property="Margin" Value="2,8"/>
-        <Setter Property="Width" Value="30"/>
+        <Setter Property="Width" Value="24"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -110,8 +108,7 @@
         <Setter Property="Foreground" Value="{DynamicResource Global.Foreground}"/>
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
         <Setter Property="BorderThickness" Value="0,1,1,1"/>
-        <Setter Property="Margin" Value="2,8"/>
-        <Setter Property="Width" Value="30"/>
+        <Setter Property="Width" Value="24"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -156,8 +153,7 @@
         <Setter Property="Foreground" Value="{DynamicResource Global.Foreground}"/>
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
         <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="Margin" Value="2,8"/>
-        <Setter Property="Width" Value="28"/>
+        <Setter Property="Width" Value="24"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -193,8 +189,7 @@
         <Setter Property="BorderBrush" Value="{DynamicResource NavButton.Static.Border}"/>
         <Setter Property="Foreground" Value="{DynamicResource Global.Foreground}"/>
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
-        <Setter Property="BorderThickness" Value="0,1,1,1"/>
-        <Setter Property="Margin" Value="0,8,0,8"/>
+        <Setter Property="BorderThickness" Value="1,1,0,1"/>
         <Setter Property="Padding" Value="1"/>
         <Setter Property="Template">
             <Setter.Value>
