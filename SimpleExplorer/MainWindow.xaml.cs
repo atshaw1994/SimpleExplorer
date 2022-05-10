@@ -26,9 +26,7 @@ namespace SimpleExplorer
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private readonly string DefaultDir = "Root";
-
         private string _CurrentFolder;
-
         public string CurrentFolder
         {
             get { return _CurrentFolder; }
@@ -38,10 +36,7 @@ namespace SimpleExplorer
                 OnPropertyChanged();
             }
         }
-
-            #pragma warning disable CS8612 // Nullability of reference types in type doesn't match implicitly implemented member.
         public event PropertyChangedEventHandler PropertyChanged;
-            #pragma warning restore CS8612 // Nullability of reference types in type doesn't match implicitly implemented member.
 
         #region BorderlessMethods
 
@@ -180,10 +175,9 @@ namespace SimpleExplorer
             InitializeComponent();
             LoadObj(DefaultDir);
         }
-
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        protected void OnPropertyChanged([CallerMemberName] string CurrentFolder = "")
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(CurrentFolder));
         }
 
         public void LoadObj(string Path)
@@ -210,23 +204,17 @@ namespace SimpleExplorer
 
         private void NavButton_Up_Click(object sender, RoutedEventArgs e)
         {
-            if (CountSlashes(CurrentFolder) > 1)
-                LoadObj(CurrentFolder[..CurrentFolder.LastIndexOf('\\')]);
-            else
-                LoadObj("Root");
+            if (CountSlashes(CurrentFolder) > 1) LoadObj(CurrentFolder[..CurrentFolder.LastIndexOf('\\')]);
+            else LoadObj("Root");
         }
+        private void NavButton_Refresh_Click(object sender, RoutedEventArgs e) => LoadObj(CurrentFolder);
 
-        private int CountSlashes(string str)
+        private static int CountSlashes(string str)
         {
             int Slashes = 0;
             for (int i = 0; i < str.Length; i++)
                 if (str[i] == '\\') Slashes++;
             return Slashes;
-        }
-
-        private void NavButton_Refresh_Click(object sender, RoutedEventArgs e)
-        {
-            LoadObj(CurrentFolder);
         }
 
         private void AddressBar_KeyDown(object sender, KeyEventArgs e)
@@ -247,6 +235,5 @@ namespace SimpleExplorer
             }
 
         }
-
     }
 }

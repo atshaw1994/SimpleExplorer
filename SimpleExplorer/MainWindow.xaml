@@ -77,8 +77,7 @@
                 </StackPanel>
                 <Border Grid.Column="1" Margin="0,0,7,8" BorderBrush="{DynamicResource Shade2.Border}" BorderThickness="1" />
                 <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Margin="1,1,8,9" Background="{DynamicResource Global.Background}">
-                    <WrapPanel Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ScrollViewer}}, Path=ActualWidth}" x:Name="ObjDisp" Orientation="Horizontal">
-                    </WrapPanel>
+                    <WrapPanel Margin="8" Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ScrollViewer}}, Path=ActualWidth}" x:Name="ObjDisp" Orientation="Horizontal"/>
                     <ScrollViewer.ContextMenu>
                         <ContextMenu>
                             <MenuItem Header="View">
