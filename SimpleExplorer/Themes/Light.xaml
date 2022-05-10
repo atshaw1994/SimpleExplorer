@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!--#region Global-->
 
-    <SolidColorBrush x:Key="Shade1" Color="#20000000"/>
+    <SolidColorBrush x:Key="Shade1" Color="#30000000"/>
     <SolidColorBrush x:Key="Shade1.Border" Color="#60000000"/>
     <SolidColorBrush x:Key="Shade2" Color="#40000000"/>
     <SolidColorBrush x:Key="Shade2.Border" Color="#80000000"/>
